@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<div style="padding-top: 30px">
+    <h1>Producto: {{ producto.nombrep}}</h1>
+
+    <p><strong>Nombre: </strong> {{ producto.nombrep }}</p>
+    <p><strong>Tipo: </strong> {{ producto.tipop }}</p>
+    <p><strong>Descripcion: </strong> {{ producto.descripcion}}</p>
+    <p><strong>Precio: </strong> {{ producto.precio}} </p>
+    <img src="{{ producto.imagen }}">
+</div>
+{% endblock %}
+
+
+<!-- % for tipop in producto.tipop.all %} {% if not forloop.last %}, {% endif %} {% endfor % -->

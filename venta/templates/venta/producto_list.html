@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<div style="padding-top: 30px">
+<h1>Lista de productos</h1>
+
+    {% if producto_list %}
+    <ul>
+        {% for prod in producto_list %}
+        <li>
+            <a href="{{ prod.get_absolute_url }}"> {{ prod.nombrep }}</a> {{ prod.tipop }}
+        </li>
+        {% endfor %}
+    </ul>
+    
+    {% else %}
+    <p>No hay productos registrados</p>
+    {% endif %}
+</div>
+{% endblock %}

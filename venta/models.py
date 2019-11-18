@@ -34,3 +34,6 @@ class Producto(models.Model):
 
     def __str__(self):
         return f'{self.id} ({self.nombrep})'
+        
+    def get_absolute_url(self):
+        return reverse('prod-detail', args=[str(self.id)])
